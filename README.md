@@ -9,19 +9,23 @@ uv sync
 npm ci
 ```
 
-Build and watch CSS and JavaScript:
+Start the frontend watchers and Uvicorn with Python reload:
 
 ```sh
-npm run dev
+./run.sh dev
 ```
 
-Run the application in a separate terminal:
+The script builds assets once before starting the server. Ctrl+C stops the
+server and frontend watchers together. If either process exits, the other is
+stopped too. It uses Bash and Linux `setsid`.
+
+Additional Uvicorn options can be passed through:
 
 ```sh
-uv run uvicorn main:app --app-dir app --reload
+./run.sh dev --port 8080
 ```
 
-`npm run dev` runs Tailwind CLI and esbuild together and stops both with Ctrl+C.
+To run only the frontend watchers, use `npm run dev`.
 Tailwind scans `app/` for CSS classes; esbuild bundles `assets/app.js` and its
 imports (HTMX and Basecoat). It does not start the Python server or reload the
 browser.
@@ -30,12 +34,18 @@ browser.
 
 ```sh
 npm ci
-npm run build
+./run.sh build
 ```
 
 The build writes minified `app.css` and `app.js` to `app/static/`.
 Include these files when deploying the Python application; Node is only required
 for building assets. FastAPI serves them under `/static`.
+
+Start the server without watchers or reload:
+
+```sh
+./run.sh serve --host 0.0.0.0 --port 8000
+```
 
 Edit `assets/app.css` for custom styles. Use complete Tailwind class names in
 Python strings so the compiler can detect them. Basecoat styles can be used
