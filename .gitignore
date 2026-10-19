@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Frontend dependencies and generated assets
+node_modules/
+app/static/*
+!app/static/.gitkeep

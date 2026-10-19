@@ -1,13 +1,8 @@
+from pathlib import Path
 from typing import Annotated
 
 from fastapi import FastAPI, Form
-from ludic.contrib.fastapi import LudicRoute
-
-app = FastAPI()
-app.router.route_class = LudicRoute
-
-
-from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from layouts.main import Page
 from ludic.contrib.fastapi import LudicRoute
 from ludic.html import (
@@ -23,6 +18,11 @@ from pages.index import index_page
 
 app = FastAPI()
 app.router.route_class = LudicRoute
+app.mount(
+    "/static",
+    StaticFiles(directory=Path(__file__).parent / "static"),
+    name="static",
+)
 
 
 @app.get("/")

@@ -7,6 +7,7 @@ from ludic.html import (
     h1,
     input,
     p,
+    span,
 )
 
 
@@ -20,9 +21,13 @@ def index_page() -> Page:
         div(
             form(
                 input(type="text", name="message", placeholder="Enter a message"),
-                button("Send", type="submit"),
+                button("Send", type="submit", class_="btn"),
                 hx_post="/message",
                 hx_target="#container",
-            )
+            ),
+            span(
+                "This is a simple example of a Ludic page with HTMX integration.",
+                class_="font-medium text-sky-300",
+            ),
         ),
     )

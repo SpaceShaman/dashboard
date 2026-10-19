@@ -1,0 +1,20 @@
+{
+  "name": "dashboard-assets",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm:dev:css\" \"npm:dev:js\"",
+    "dev:css": "tailwindcss -i assets/app.css -o app/static/app.css --watch=always",
+    "dev:js": "esbuild assets/app.js --bundle --outfile=app/static/app.js --sourcemap --watch=forever",
+    "build": "tailwindcss -i assets/app.css -o app/static/app.css --minify && esbuild assets/app.js --bundle --minify --outfile=app/static/app.js"
+  },
+  "dependencies": {
+    "basecoat-css": "1.0.2",
+    "htmx.org": "2.0.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "concurrently": "10.0.6",
+    "esbuild": "0.28.2",
+    "tailwindcss": "4.3.3"
+  }
+}
