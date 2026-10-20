@@ -1,15 +1,20 @@
+from collections.abc import Callable
 from functools import wraps
+from typing import Any, cast
 
 from fasthtml.common import *
 
 
-def with_classes(component, default_cls):
+def with_classes[C: Callable[..., Any]](
+    component: C,
+    default_cls: str,
+) -> C:
     @wraps(component)
-    def wrapped(*args, cls="", **kwargs):
+    def wrapped(*args: Any, cls: str = "", **kwargs: Any) -> Any:
         classes = f"{default_cls} {cls}".strip()
         return component(*args, cls=classes, **kwargs)
 
-    return wrapped
+    return cast(C, wrapped)
 
 
 Input = with_classes(Input, "input")
