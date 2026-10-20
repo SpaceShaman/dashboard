@@ -12,7 +12,10 @@ def Base(*c, title: str, **kwargs):
             Script(src="/static/app.js", defer=True),
         ),
         Body(
-            ToggleThemeButton(),
+            Div(
+                ToggleThemeButton(),
+                cls="fixed top-4 right-4 z-50",
+            ),
             *c,
             LoadThemeScript(),
         ),
