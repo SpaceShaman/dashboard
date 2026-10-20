@@ -5,15 +5,14 @@
     "dev": "concurrently --kill-others \"npm:dev:css\" \"npm:dev:js\"",
     "dev:css": "tailwindcss -i assets/app.css -o app/static/app.css --watch=always",
     "dev:js": "esbuild assets/app.js --bundle --outfile=app/static/app.js --sourcemap --watch=forever",
-    "build:icons": "mkdir -p app/static/icons && cp node_modules/lucide-static/icons/*.svg app/static/icons",
     "build:css": "tailwindcss -i assets/app.css -o app/static/app.css --minify",
     "build:js": "esbuild assets/app.js --bundle --minify --outfile=app/static/app.js",
-    "build": "concurrently --kill-others \"npm:build:css\" \"npm:build:js\" \"npm:build:icons\""
+    "build": "concurrently --kill-others-on-fail \"npm:build:css\" \"npm:build:js\""
   },
   "dependencies": {
     "basecoat-css": "1.0.2",
     "htmx.org": "2.0.11",
-    "lucide-static": "1.60.0"
+    "lucide": "1.60.0"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.3",

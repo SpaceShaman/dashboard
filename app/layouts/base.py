@@ -1,4 +1,4 @@
-from components.toggle_theme import ToggleThemeButton
+from components.theme import LoadThemeScript, ToggleThemeButton
 from fasthtml.common import *
 
 
@@ -14,6 +14,7 @@ def Base(*c, title: str, **kwargs):
         Body(
             ToggleThemeButton(),
             *c,
+            LoadThemeScript(),
         ),
         **kwargs,
     )

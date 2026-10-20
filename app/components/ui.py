@@ -9,11 +9,8 @@ Card = partial(Div, cls="card")
 CardAction = partial(Div, cls="card-action")
 
 
-def Icon(name: str, cls: str = "", **kwargs) -> FT:
-    # return Img(src=f"/static/icons/{name}.svg", **kwargs)
+def Icon(name: str, **kwargs) -> FT:
     return Span(
-        cls=f"icon {cls}",
-        style=f"--icon-url: url('/static/icons/{name}.svg')",
-        aria_hidden="true",
+        data_lucide=name,
         **kwargs,
     )
