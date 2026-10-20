@@ -5,10 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-  "fastapi>=0.143.3",
-  "ludic[fastapi]>=1.0.3",
-  "python-multipart>=0.0.32",
-  "uvicorn>=0.54.0",
+    "python-fasthtml>=0.14.13",
+    "userharbor[smtp,sqlalchemy]>=0.9.1",
 ]
 
 [tool.ty.environment]
