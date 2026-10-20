@@ -12,10 +12,11 @@ def ToggleThemeButton() -> FT:
                 name="moon",
                 cls="block dark:hidden",
             ),
+            aria_label="Toggle dark mode",
             data_tooltip="Toggle dark mode",
             data_side="bottom",
+            data_align="end",
             onclick="window.basecoat.theme.toggle()",
-            cls="btn size-8",
             data_variant="ghost",
         ),
     )
