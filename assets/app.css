@@ -1,4 +1,6 @@
 @import "tailwindcss" source(none);
 @import "basecoat-css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @source "../app";
