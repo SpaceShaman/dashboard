@@ -17,6 +17,7 @@ def with_classes[C: Callable[..., Any]](
     return cast(C, wrapped)
 
 
+Label = with_classes(Label, "label")
 Input = with_classes(Input, "input")
 Button = with_classes(Button, "btn")
 

@@ -26,27 +26,25 @@ def get():
             Card(
                 Header(
                     H2("Login to your account"),
-                    P("Enter your email below to login to your account"),
+                    P("Enter your credentials to access your account."),
                     CardAction(
-                        Button("Sign Up", type="button", data_variant="link"),
+                        Button("Sign Up", data_variant="link"),
                     ),
                 ),
                 Section(
                     Form(
                         Div(
-                            Label("Email", fr="demo-card-email", cls="label"),
+                            Label("Username", fr="username"),
                             Input(
-                                type="email",
-                                id="demo-card-email",
-                                name="email",
-                                placeholder="m@example.com",
+                                id="username",
+                                name="username",
                                 required=True,
                             ),
                             cls="grid gap-2",
                         ),
                         Div(
                             Div(
-                                Label("Password", fr="demo-card-password", cls="label"),
+                                Label("Password", fr="password"),
                                 A(
                                     "Forgot your password?",
                                     href="#",
@@ -56,7 +54,7 @@ def get():
                             ),
                             Input(
                                 type="password",
-                                id="demo-card-password",
+                                id="password",
                                 name="password",
                                 required=True,
                             ),
@@ -66,14 +64,7 @@ def get():
                     ),
                 ),
                 Footer(
-                    Button("Login", type="button", cls="btn w-full"),
-                    Button(
-                        "Login with Google",
-                        type="button",
-                        cls="btn w-full",
-                        data_variant="outline",
-                    ),
-                    cls="flex-col gap-2",
+                    Button("Login", cls="w-full"),
                 ),
                 cls="w-full max-w-sm",
             ),
