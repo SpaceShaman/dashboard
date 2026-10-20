@@ -1,6 +1,6 @@
+from components.ui import Button, Input
 from fasthtml.common import H1, Form, fast_app
 from layouts.base import Base
-from ui import Button, Input
 
 login_app, rt = fast_app()
 

@@ -1,3 +1,4 @@
+from components.toggle_theme import ToggleThemeButton
 from fasthtml.common import *
 
 
@@ -10,6 +11,9 @@ def Base(*c, title: str, **kwargs):
             Link(rel="stylesheet", href="/static/app.css"),
             Script(src="/static/app.js", defer=True),
         ),
-        Body(*c),
+        Body(
+            ToggleThemeButton(),
+            *c,
+        ),
         **kwargs,
     )
