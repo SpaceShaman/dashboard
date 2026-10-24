@@ -1,6 +1,9 @@
 import "htmx.org";
 import "basecoat-css/all";
-import { createIcons, icons } from "lucide";
+import { createIcons, Sun, Moon, Info, CircleX } from "lucide";
+
+// Register additional icons here and in the import above.
+const icons = { Sun, Moon, Info, CircleX };
 
 const initIcons = () => createIcons({ icons });
 
