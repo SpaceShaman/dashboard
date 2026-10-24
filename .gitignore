@@ -223,5 +223,7 @@ __marimo__/
 node_modules/
 app/static/*
 !app/static/.gitkeep
+app/icons/*
+!app/icons/.gitkeep
 
 .sesskey

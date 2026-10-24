@@ -37,9 +37,16 @@ npm ci
 ./run.sh build
 ```
 
-The build writes minified `app.css` and `app.js` to `app/static/`.
-Include these files when deploying the Python application; Node is only required
-for building assets. FastAPI serves them under `/static`.
+The build writes minified `app.css` and `app.js` to `app/static/` and copies
+Lucide SVG files to `app/icons/`. Include both directories when deploying the
+Python application; Node is only required for building assets. FastHTML serves
+the CSS and JavaScript under `/static`; icons are embedded directly in HTML.
+
+Use `Icon("info", cls="size-4")` in Python components. Icon names match the
+SVG filenames in `lucide-static` (for example `circle-x`). No JavaScript imports
+or HTMX initialization are needed. `npm run dev` and `npm run build` copy icons
+automatically; `npm run build:icons` can also be run separately. Source SVGs are
+cached in Python, so restart the server after updating the icon package.
 
 Start the server without watchers or reload:
 
@@ -49,5 +56,5 @@ Start the server without watchers or reload:
 
 Edit `assets/app.css` for custom styles. Use complete Tailwind class names in
 Python strings so the compiler can detect them. Basecoat styles can be used
-with Ludic attributes such as `class_="btn"` and
-`dataset={"variant": "outline"}`.
+with FastHTML attributes such as `cls="btn"` and
+`data_variant="outline"`.

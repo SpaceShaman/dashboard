@@ -2,6 +2,9 @@
   "name": "dashboard-assets",
   "private": true,
   "scripts": {
+    "build:icons": "node -e \"require('node:fs').cpSync('node_modules/lucide-static/icons', 'app/icons', { recursive: true })\"",
+    "predev": "npm run build:icons",
+    "prebuild": "npm run build:icons",
     "dev": "concurrently --kill-others \"npm:dev:css\" \"npm:dev:js\"",
     "dev:css": "tailwindcss -i assets/app.css -o app/static/app.css --watch=always",
     "dev:js": "esbuild assets/app.js --bundle --outfile=app/static/app.js --sourcemap --watch=forever",
@@ -12,7 +15,7 @@
   "dependencies": {
     "basecoat-css": "1.0.2",
     "htmx.org": "2.0.11",
-    "lucide": "1.60.0"
+    "lucide-static": "1.60.0"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.3",
