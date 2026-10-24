@@ -8,6 +8,7 @@ def Alert(heading: str, message: str, variant: str = "destructive"):
             Section(message),
             cls="alert w-full max-w-md",
             data_variant=variant,
+            hx_on__load="setTimeout(() => { this.remove() }, 5000)",
         ),
         hx_swap_oob="beforeend:#alerts",
     )
