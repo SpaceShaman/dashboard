@@ -5,11 +5,11 @@ def ToggleThemeButton() -> FT:
     return Div(
         Button(
             Icon(
-                name="sun",
+                "sun",
                 cls="hidden dark:block",
             ),
             Icon(
-                name="moon",
+                "moon",
                 cls="block dark:hidden",
             ),
             aria_label="Toggle dark mode",

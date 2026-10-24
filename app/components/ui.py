@@ -28,5 +28,6 @@ CardAction = with_classes(Div, "card-action")
 def Icon(name: str, **kwargs) -> FT:
     return Span(
         data_lucide=name,
+        size="1em",
         **kwargs,
     )
