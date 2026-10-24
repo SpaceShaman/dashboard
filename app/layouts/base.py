@@ -5,7 +5,7 @@ from fasthtml.core import vurl
 ASSETS_ROOT = Path(__file__).parent.parent
 
 
-def Base(*c, title: str, **kwargs):
+def Base(*c, title: str, **kwargs) -> FT:
     return Html(
         Head(
             Title(title),

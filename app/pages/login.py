@@ -1,6 +1,7 @@
 from components.alert import Alert
 from components.login_form import LoginForm
 from components.ui import (
+    FT,
     H2,
     Button,
     Card,
@@ -18,7 +19,7 @@ rt = login_app.route
 
 
 @rt("/")
-def get():
+def get() -> FT:
     return Base(
         Div(
             Card(
@@ -41,5 +42,5 @@ def get():
 
 
 @rt("/")
-def post(username: str, password: str):
+def post(username: str, password: str) -> FT:
     return Alert("Login Failed", "Invalid username or password.")
