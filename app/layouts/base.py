@@ -19,8 +19,7 @@ def Base(*c, title: str, **kwargs):
                 id="alerts",
                 cls="fixed top-4 inset-x-0 z-50 flex flex-col items-center gap-4 px-4",
             ),
-            Div(
-                ToggleThemeButton(),
+            ToggleThemeButton(
                 cls="fixed top-4 right-4 z-50",
             ),
             *c,

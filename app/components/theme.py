@@ -1,24 +1,23 @@
-from components.ui import FT, Button, Div, Icon, Script
+from components.ui import FT, Button, Icon, Script
 
 
-def ToggleThemeButton() -> FT:
-    return Div(
-        Button(
-            Icon(
-                "sun",
-                cls="hidden dark:block",
-            ),
-            Icon(
-                "moon",
-                cls="block dark:hidden",
-            ),
-            aria_label="Toggle dark mode",
-            data_tooltip="Toggle dark mode",
-            data_side="bottom",
-            data_align="end",
-            onclick="window.basecoat.theme.toggle()",
-            data_variant="ghost",
+def ToggleThemeButton(cls: str = "") -> FT:
+    return Button(
+        Icon(
+            "sun",
+            cls="hidden dark:block",
         ),
+        Icon(
+            "moon",
+            cls="block dark:hidden",
+        ),
+        aria_label="Toggle dark mode",
+        data_tooltip="Toggle dark mode",
+        data_side="bottom",
+        data_align="end",
+        onclick="window.basecoat.theme.toggle()",
+        data_variant="ghost",
+        cls=cls,
     )
 
 
