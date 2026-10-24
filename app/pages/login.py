@@ -1,22 +1,20 @@
+from components.alert import Alert
+from components.login_form import LoginForm
 from components.ui import (
     H2,
-    A,
     Button,
     Card,
     CardAction,
     Div,
-    Footer,
-    Form,
     Header,
-    Input,
-    Label,
     P,
     Section,
 )
-from fasthtml.common import fast_app
+from fasthtml.common import FastHTML
 from layouts.base import Base
 
-login_app, rt = fast_app()
+login_app = FastHTML()
+rt = login_app.route
 
 
 @rt("/")
@@ -32,39 +30,7 @@ def get():
                     ),
                 ),
                 Section(
-                    Form(
-                        Div(
-                            Label("Username", fr="username"),
-                            Input(
-                                id="username",
-                                name="username",
-                                required=True,
-                            ),
-                            cls="grid gap-2",
-                        ),
-                        Div(
-                            Div(
-                                Label("Password", fr="password"),
-                                A(
-                                    "Forgot your password?",
-                                    href="#",
-                                    cls="ms-auto inline-block text-sm underline-offset-4 hover:underline",
-                                ),
-                                cls="flex items-center",
-                            ),
-                            Input(
-                                type="password",
-                                id="password",
-                                name="password",
-                                required=True,
-                            ),
-                            cls="grid gap-2",
-                        ),
-                        cls="grid gap-6",
-                    ),
-                ),
-                Footer(
-                    Button("Login", cls="w-full"),
+                    LoginForm(),
                 ),
                 cls="w-full max-w-sm",
             ),
@@ -72,3 +38,8 @@ def get():
         ),
         title="Login Page",
     )
+
+
+@rt("/")
+def post(username: str, password: str):
+    return Alert("Login Failed", "Invalid username or password.")
