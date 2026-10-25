@@ -1,40 +1,20 @@
-<a href="https://github.com/SpaceShaman/spaceos"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fspaceos&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="SpaceOS" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fspaceos&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/userharbor/userharbor"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=userharbor%2Fuserharbor&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="UserHarbor" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=userharbor%2Fuserharbor&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/SpaceShaman/fasthtml-lucide"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Ffasthtml-lucide&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="fasthtml-lucide" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Ffasthtml-lucide&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/SpaceShaman/socketapi"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fsocketapi&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="SocketAPI" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fsocketapi&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/SpaceShaman/SQLift"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2FSQLift&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="SQLift" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2FSQLift&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/SpaceShaman/ORMagic"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2FORMagic&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="ORMagic" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2FORMagic&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/SpaceShaman/autopy.fish"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fautopy.fish&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="autopy.fish" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fautopy.fish&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/SpaceShaman/autoenv.fish"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fautoenv.fish&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="autoenv.fish" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fautoenv.fish&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/SpaceShaman/bitwarden-py"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fbitwarden-py&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="bitwarden-py" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fbitwarden-py&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
-<a href="https://github.com/SpaceShaman/window-shuffler.nvim"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fwindow-shuffler.nvim&show_owner=true&description_lines_count=3&theme=dark_github_repocard">
-  <img alt="window-shuffler.nvim" src="https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fwindow-shuffler.nvim&show_owner=true&description_lines_count=3&theme=light_github_repocard">
-</picture></a>
+[![SpaceOS](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fspaceos&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/spaceos#gh-dark-mode-only)
+[![SpaceOS](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fspaceos&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/spaceos#gh-light-mode-only)
+[![UserHarbor](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=userharbor%2Fuserharbor&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/userharbor/userharbor#gh-dark-mode-only)
+[![UserHarbor](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=userharbor%2Fuserharbor&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/userharbor/userharbor#gh-light-mode-only)
+[![fasthtml-lucide](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Ffasthtml-lucide&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/fasthtml-lucide#gh-dark-mode-only)
+[![fasthtml-lucide](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Ffasthtml-lucide&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/fasthtml-lucide#gh-light-mode-only)
+[![SocketAPI](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fsocketapi&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/socketapi#gh-dark-mode-only)
+[![SocketAPI](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fsocketapi&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/socketapi#gh-light-mode-only)
+[![SQLift](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2FSQLift&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/SQLift#gh-dark-mode-only)
+[![SQLift](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2FSQLift&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/SQLift#gh-light-mode-only)
+[![ORMagic](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2FORMagic&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/ORMagic#gh-dark-mode-only)
+[![ORMagic](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2FORMagic&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/ORMagic#gh-light-mode-only)
+[![autopy.fish](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fautopy.fish&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/autopy.fish#gh-dark-mode-only)
+[![autopy.fish](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fautopy.fish&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/autopy.fish#gh-light-mode-only)
+[![autoenv.fish](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fautoenv.fish&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/autoenv.fish#gh-dark-mode-only)
+[![autoenv.fish](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fautoenv.fish&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/autoenv.fish#gh-light-mode-only)
+[![bitwarden-py](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fbitwarden-py&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/bitwarden-py#gh-dark-mode-only)
+[![bitwarden-py](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fbitwarden-py&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/bitwarden-py#gh-light-mode-only)
+[![window-shuffler.nvim](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fwindow-shuffler.nvim&show_owner=true&description_lines_count=3&theme=dark_github_repocard#gh-dark-mode-only)](https://github.com/SpaceShaman/window-shuffler.nvim#gh-dark-mode-only)
+[![window-shuffler.nvim](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fwindow-shuffler.nvim&show_owner=true&description_lines_count=3&theme=light_github_repocard#gh-light-mode-only)](https://github.com/SpaceShaman/window-shuffler.nvim#gh-light-mode-only)
