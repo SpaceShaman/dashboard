@@ -1,1 +1,2 @@
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=userharbor%2Fuserharbor&show_owner=true&description_lines_count=3&theme=transparent)](https://github.com/userharbor/userharbor)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/pin?username=SpaceShaman&repo=SpaceShaman%2Fspaceos&show_owner=true&description_lines_count=3&theme=transparent)](https://github.com/SpaceShaman/spaceos)
