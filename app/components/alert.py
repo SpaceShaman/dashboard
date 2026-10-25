@@ -1,4 +1,6 @@
-from .ui import H2, Button, Div, Footer, Icon, Section
+from fasthtml_lucide import Icon
+
+from .ui import H2, Button, Div, Footer, Section
 
 
 def Alert(heading: str, message: str, variant: str = "destructive"):

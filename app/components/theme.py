@@ -1,4 +1,5 @@
-from components.ui import FT, Button, Icon, Script
+from components.ui import FT, Button, Script
+from fasthtml_lucide import Icon
 
 
 def ToggleThemeButton(cls: str = "") -> FT:

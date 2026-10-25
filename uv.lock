@@ -155,12 +155,14 @@ name = "dashboard"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "fasthtml-lucide" },
     { name = "python-fasthtml" },
     { name = "userharbor", extra = ["smtp", "sqlalchemy"] },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "fasthtml-lucide", specifier = ">=1.61.0" },
     { name = "python-fasthtml", specifier = ">=0.14.13" },
     { name = "userharbor", extras = ["smtp", "sqlalchemy"], specifier = ">=0.9.1" },
 ]
@@ -172,6 +174,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/10/f4/a03f290cb0d1aedcf837c51b2be193a28dcc437697f5a57441f16d2c6a27/fastcore-2.2.33.tar.gz", hash = "sha256:919cc6d182e633a206238bfaacb39f37b7da985974568121347eedf0bec602c0", size = 145347, upload-time = "2026-10-05T06:56:55.208Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/93/77/687142707e4ff6b11c63f10dba0562e1be08eb214eaca9b46eab2f77a1fe/fastcore-2.2.33-py3-none-any.whl", hash = "sha256:2c29d35263d88d21d6c3c5ddef92fe3547161e4af0d3efcd324a6277de1a4fba", size = 152034, upload-time = "2026-10-05T06:56:53.423Z" },
+]
+
+[[package]]
+name = "fasthtml-lucide"
+version = "1.61.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-fasthtml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6e/78/3690db2eda1245ef22d410fc815c8e2746513d996e4c835b76e0b49b7b94/fasthtml_lucide-1.61.0.tar.gz", hash = "sha256:2e51166190ff167ed3d0393536548ad6d68b96341c63ea98fbffc35782464298", size = 169550, upload-time = "2026-10-25T11:10:29.473Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6d/0d/7300f37a9bb7dad34fe3d3e5de527e18c736b85161dcd8f4a8dfd4a4e5a0/fasthtml_lucide-1.61.0-py3-none-any.whl", hash = "sha256:629733715fdc3af52cb495a6d2ef2980edb7b14e43995ef368c4d038371ab511", size = 1033678, upload-time = "2026-10-25T11:10:28.024Z" },
 ]
 
 [[package]]
