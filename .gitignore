@@ -227,3 +227,4 @@ app/icons/*
 !app/icons/.gitkeep
 
 .sesskey
+.fasthtml-tailwindcss
