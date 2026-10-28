@@ -12,7 +12,6 @@ def AuthPage() -> FT:
                 Nav(
                     Button(
                         "Login",
-                        type="button",
                         role="tab",
                         id="auth-login-tab",
                         aria_controls="auth-login-panel",
@@ -21,7 +20,6 @@ def AuthPage() -> FT:
                     ),
                     Button(
                         "Sign Up",
-                        type="button",
                         role="tab",
                         id="auth-register-tab",
                         aria_controls="auth-register-panel",
@@ -53,5 +51,5 @@ def AuthPage() -> FT:
             ),
             cls="min-h-dvh flex items-center justify-center p-4",
         ),
-        title="Account",
+        title="Login or Sign Up",
     )
