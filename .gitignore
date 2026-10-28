@@ -228,3 +228,5 @@ app/icons/*
 
 .sesskey
 .fasthtml-tailwindcss
+
+users.db
