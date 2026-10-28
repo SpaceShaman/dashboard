@@ -48,7 +48,7 @@ def _RegisterForm() -> FT:
             ),
             cls="grid gap-2",
         ),
-        Button("Create account", type="submit", cls="w-full"),
+        Button("Create account", cls="w-full"),
         cls="grid gap-6",
         hx_post="register",
         hx_swap="none",

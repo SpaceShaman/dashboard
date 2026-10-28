@@ -35,7 +35,7 @@ def _LoginForm() -> FT:
                 Label("Password", fr="password"),
                 A(
                     "Forgot your password?",
-                    href="#",
+                    onclick="event.preventDefault(); this.closest('.tabs').select(document.getElementById('auth-forgot-password-tab'));",
                     cls="ms-auto inline-block text-sm underline-offset-4 hover:underline",
                 ),
                 cls="flex items-center",
