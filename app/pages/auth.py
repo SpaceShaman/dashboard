@@ -4,7 +4,7 @@ from fasthtml_basecoat import Button, Card, CardAction
 from layouts.base import Base
 
 
-def LoginPage() -> FT:
+def AuthPage() -> FT:
     return Base(
         Div(
             Card(

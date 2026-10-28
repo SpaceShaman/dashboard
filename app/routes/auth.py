@@ -1,7 +1,7 @@
 from components.alert import Alert
 from core.harbor import harbor
 from fasthtml.common import FT, fast_app
-from pages.login import LoginPage
+from pages.auth import AuthPage
 from starlette.responses import RedirectResponse
 from userharbor.exceptions import UserHarborError
 
@@ -10,7 +10,7 @@ auth_app, rt = fast_app()
 
 @rt
 def index() -> FT:
-    return LoginPage()
+    return AuthPage()
 
 
 @rt
