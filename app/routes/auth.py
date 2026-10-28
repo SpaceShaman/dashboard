@@ -17,8 +17,8 @@ def index() -> FT:
 def login(username: str, password: str) -> FT | RedirectResponse:
     try:
         session_token = harbor.login(username, password)
-    except UserHarborError:
-        return Alert("Login Failed", "Invalid username or password.")
+    except UserHarborError as e:
+        return Alert("Login Failed", str(e), variant="error")
     response = RedirectResponse("/", status_code=303)
     response.set_cookie(
         "session_token",
@@ -29,3 +29,16 @@ def login(username: str, password: str) -> FT | RedirectResponse:
         samesite="lax",
     )
     return response
+
+
+@rt
+def register(username: str, email: str, password: str) -> FT:
+    try:
+        harbor.register(username, email, password)
+    except UserHarborError as e:
+        return Alert("Registration Failed", str(e), variant="error")
+    return Alert(
+        "Registration Successful",
+        "Check your email for a verification link.",
+        variant="info",
+    )
