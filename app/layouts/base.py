@@ -15,6 +15,7 @@ def Base(*c, title: str, **kwargs) -> FT:
             Title(title),
             Meta(charset="utf-8"),
             Meta(name="viewport", content="width=device-width, initial-scale=1"),
+            Script(src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.11/dist/htmx.js"),
             BasecoatJS(),
             TailwindHead(input=BasecoatInput("nova"), watch=True),
         ),

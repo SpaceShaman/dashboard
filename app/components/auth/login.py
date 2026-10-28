@@ -1,16 +1,29 @@
-from fasthtml.common import FT, A, Div, Form
+from fasthtml.common import FT, H2, A, Div, Form, Header, P, Section
 from fasthtml_basecoat import (
     Button,
+    Card,
     Input,
     Label,
 )
 
 
-def LoginForm() -> FT:
+def LoginCard(**attrs) -> FT:
+    return Card(
+        Header(
+            H2("Login to your account"),
+            P("Enter your credentials to access your account."),
+        ),
+        Section(_LoginForm()),
+        **attrs,
+    )
+
+
+def _LoginForm() -> FT:
     return Form(
         Div(
             Label("Username", fr="username"),
             Input(
+                type="text",
                 id="username",
                 name="username",
                 required=True,
@@ -37,6 +50,6 @@ def LoginForm() -> FT:
         ),
         Button("Login", cls="w-full"),
         cls="grid gap-6",
-        hx_post="/login",
+        hx_post="login",
         hx_swap="none",
     )

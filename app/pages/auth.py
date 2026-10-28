@@ -1,26 +1,57 @@
-from components.login_form import LoginForm
-from fasthtml.common import FT, H2, Div, Header, P, Section
-from fasthtml_basecoat import Button, Card, CardAction
+from components.auth.login import LoginCard
+from components.auth.register import RegisterCard
+from fasthtml.common import FT, Button, Div, Nav
+from fasthtml_basecoat import Tabs
 from layouts.base import Base
 
 
 def AuthPage() -> FT:
     return Base(
         Div(
-            Card(
-                Header(
-                    H2("Login to your account"),
-                    P("Enter your credentials to access your account."),
-                    CardAction(
-                        Button("Sign Up", data_variant="link"),
+            Tabs(
+                Nav(
+                    Button(
+                        "Login",
+                        type="button",
+                        role="tab",
+                        id="auth-login-tab",
+                        aria_controls="auth-login-panel",
+                        aria_selected="true",
+                        tabindex="0",
                     ),
+                    Button(
+                        "Sign Up",
+                        type="button",
+                        role="tab",
+                        id="auth-register-tab",
+                        aria_controls="auth-register-panel",
+                        aria_selected="false",
+                        tabindex="-1",
+                    ),
+                    role="tablist",
+                    aria_orientation="horizontal",
+                    aria_label="Account access",
+                    cls="w-full",
                 ),
-                Section(
-                    LoginForm(),
+                LoginCard(
+                    role="tabpanel",
+                    id="auth-login-panel",
+                    aria_labelledby="auth-login-tab",
+                    aria_selected="true",
+                    tabindex="-1",
                 ),
+                RegisterCard(
+                    role="tabpanel",
+                    id="auth-register-panel",
+                    aria_labelledby="auth-register-tab",
+                    aria_selected="false",
+                    tabindex="-1",
+                    hidden=True,
+                ),
+                id="auth-tabs",
                 cls="w-full max-w-sm",
             ),
             cls="min-h-dvh flex items-center justify-center p-4",
         ),
-        title="Login Page",
+        title="Account",
     )
