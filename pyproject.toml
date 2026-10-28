@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+  "fasthtml-basecoatui>=1.1.0",
   "fasthtml-lucide>=1.61.0",
   "fasthtml-tailwindcss[dev]>=4.3.3.post1",
   "python-fasthtml>=0.14.13",

@@ -1,9 +1,6 @@
-from .ui import (
-    FT,
-    A,
+from fasthtml.common import FT, A, Div, Form
+from fasthtml_basecoat import (
     Button,
-    Div,
-    Form,
     Input,
     Label,
 )

@@ -155,6 +155,7 @@ name = "dashboard"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "fasthtml-basecoatui" },
     { name = "fasthtml-lucide" },
     { name = "fasthtml-tailwindcss", extra = ["dev"] },
     { name = "python-fasthtml" },
@@ -163,6 +164,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fasthtml-basecoatui", specifier = ">=1.1.0" },
     { name = "fasthtml-lucide", specifier = ">=1.61.0" },
     { name = "fasthtml-tailwindcss", extras = ["dev"], specifier = ">=4.3.3.post1" },
     { name = "python-fasthtml", specifier = ">=0.14.13" },
@@ -176,6 +178,19 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/10/f4/a03f290cb0d1aedcf837c51b2be193a28dcc437697f5a57441f16d2c6a27/fastcore-2.2.33.tar.gz", hash = "sha256:919cc6d182e633a206238bfaacb39f37b7da985974568121347eedf0bec602c0", size = 145347, upload-time = "2026-10-05T06:56:55.208Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/93/77/687142707e4ff6b11c63f10dba0562e1be08eb214eaca9b46eab2f77a1fe/fastcore-2.2.33-py3-none-any.whl", hash = "sha256:2c29d35263d88d21d6c3c5ddef92fe3547161e4af0d3efcd324a6277de1a4fba", size = 152034, upload-time = "2026-10-05T06:56:53.423Z" },
+]
+
+[[package]]
+name = "fasthtml-basecoatui"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "fasthtml-tailwindcss" },
+    { name = "python-fasthtml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/88/c4/cce746f459ca2d66b7998ba83b09532879d16617b6b2c02f65b4c4e25d0a/fasthtml_basecoatui-1.1.0.tar.gz", hash = "sha256:416deae757ac8cede5c89f64c55c6baa19442feb89204612064be6310ea4dd6a", size = 178071, upload-time = "2026-10-27T19:50:13.568Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/66/22/a6386b73fafe46925c11b6c2f2f9648efae6a3814b9dc520fb2ce7cad57e/fasthtml_basecoatui-1.1.0-py3-none-any.whl", hash = "sha256:1e92b3903e42e0f35ddd25a8b8ccd212f917130a727a3f36ece0384dff06723d", size = 153293, upload-time = "2026-10-27T19:50:12.537Z" },
 ]
 
 [[package]]
@@ -502,7 +517,7 @@ wheels = [
 
 [[package]]
 name = "python-fasthtml"
-version = "0.14.13"
+version = "0.14.14"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -515,9 +530,9 @@ dependencies = [
     { name = "starlette" },
     { name = "uvicorn", extra = ["standard"] },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/60/f4/629163a02e136a1077b2c36acad13b7d6e2864469970b0fe310c4024440b/python_fasthtml-0.14.13.tar.gz", hash = "sha256:fbdef364d3824f5db2f40e0884b4541f00b2d7ec925e5e1e62949b2ede7daf5d", size = 80229, upload-time = "2026-09-03T01:18:39.846Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/dd/73/4fd5fcda868caf968ff55fdd4e594486de60110e8a6a379a6d437df94791/python_fasthtml-0.14.14.tar.gz", hash = "sha256:611640c1b635667ab038798efc0aa0df6992deb845317b5fbe062b42b23f836b", size = 80458, upload-time = "2026-10-20T23:02:21.721Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/97/fa/771f53bbf9d1e5733de7851638f97fae8369a31a4b154c1d8640bfefb857/python_fasthtml-0.14.13-py3-none-any.whl", hash = "sha256:549a9ee3d1aceb41158ee2e47670faf0e7ae39b901bb333ff5ce7b799b07d8bd", size = 83656, upload-time = "2026-09-03T01:18:38.201Z" },
+    { url = "https://files.pythonhosted.org/packages/88/e4/2452cf72e58ad33e979c3b9e4d75c58f89e7917bea6eea8cd0192a5d57c7/python_fasthtml-0.14.14-py3-none-any.whl", hash = "sha256:f9860d6c0961a48169218bcc21ce064c90a62abdb49ccf55e7472869e7e65a92", size = 83843, upload-time = "2026-10-20T23:02:19.798Z" },
 ]
 
 [[package]]

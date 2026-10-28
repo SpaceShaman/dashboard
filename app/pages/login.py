@@ -1,25 +1,10 @@
-from components.alert import Alert
 from components.login_form import LoginForm
-from components.ui import (
-    FT,
-    H2,
-    Button,
-    Card,
-    CardAction,
-    Div,
-    Header,
-    P,
-    Section,
-)
-from fasthtml.common import FastHTML
+from fasthtml.common import FT, H2, Div, Header, P, Section
+from fasthtml_basecoat import Button, Card, CardAction
 from layouts.base import Base
 
-login_app = FastHTML()
-rt = login_app.route
 
-
-@rt("/")
-def get() -> FT:
+def LoginPage() -> FT:
     return Base(
         Div(
             Card(
@@ -39,8 +24,3 @@ def get() -> FT:
         ),
         title="Login Page",
     )
-
-
-@rt("/")
-def post(username: str, password: str) -> FT:
-    return Alert("Login Failed", "Invalid username or password.")

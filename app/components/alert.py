@@ -1,6 +1,6 @@
+from fasthtml.common import H2, Div, Footer, Section
+from fasthtml_basecoat import Alert, Button
 from fasthtml_lucide import Icon
-
-from .ui import H2, Button, Div, Footer, Section
 
 
 def Alert(heading: str, message: str, variant: str = "destructive"):
