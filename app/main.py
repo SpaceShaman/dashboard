@@ -14,13 +14,16 @@ from starlette.routing import Mount
 async def check_session(request, call_next):
     path = request.url.path
 
-    if path.startswith(("/auth", "/static")):
-        return await call_next(request)
-
     token = request.cookies.get("session_token")
+    is_authenticated = token is not None and harbor.verify_session(token)
 
-    if not token or not harbor.verify_session(token):
-        return RedirectResponse("/auth/", status_code=303)
+    if path.startswith("/auth") and is_authenticated:
+        return RedirectResponse("/", status_code=303)
+
+    if not path.startswith(("/auth", "/static")) and not is_authenticated:
+        response = RedirectResponse("/auth/", status_code=303)
+        response.delete_cookie("session_token", path="/")
+        return response
 
     return await call_next(request)
 
