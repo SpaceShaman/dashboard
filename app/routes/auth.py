@@ -1,7 +1,8 @@
 from components.alert import Alert
 from core.harbor import harbor
-from fasthtml.common import FT, fast_app
+from fasthtml.common import FT, HttpHeader, fast_app
 from pages.auth import AuthPage
+from pages.verify_email import VerifyEmailPage
 from starlette.responses import RedirectResponse
 from userharbor.exceptions import UserHarborError
 
@@ -42,3 +43,14 @@ def register(username: str, email: str, password: str) -> FT:
         "Check your email for a verification link.",
         variant="info",
     )
+
+
+@rt(methods=["GET"])
+def verify_email(token: str) -> tuple[FT, HttpHeader]:
+    try:
+        harbor.verify_email(token)
+    except UserHarborError as e:
+        page = VerifyEmailPage(error=str(e))
+    else:
+        page = VerifyEmailPage()
+    return page, HttpHeader("Referrer-Policy", "no-referrer")

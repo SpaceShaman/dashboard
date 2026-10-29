@@ -9,7 +9,9 @@ dependencies = [
   "fasthtml-lucide>=1.61.0",
   "fasthtml-tailwindcss[dev]>=4.3.3.post1",
   "python-fasthtml>=0.14.13",
-  "userharbor[smtp,sqlalchemy]>=0.9.1",
+  "userharbor>=0.9.1",
+  "userharbor-smtp>=0.4.0",
+  "userharbor-sqlalchemy>=0.7.0",
 ]
 
 [tool.ty.environment]

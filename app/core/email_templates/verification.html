@@ -1,0 +1,4 @@
+<p>Hello {{ username }},</p>
+<p>
+  <a href="{{ app_url.rstrip('/') }}/auth/verify_email?token={{ token | urlencode }}">Activate your account</a>
+</p>

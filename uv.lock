@@ -159,7 +159,9 @@ dependencies = [
     { name = "fasthtml-lucide" },
     { name = "fasthtml-tailwindcss", extra = ["dev"] },
     { name = "python-fasthtml" },
-    { name = "userharbor", extra = ["smtp", "sqlalchemy"] },
+    { name = "userharbor" },
+    { name = "userharbor-smtp" },
+    { name = "userharbor-sqlalchemy" },
 ]
 
 [package.metadata]
@@ -168,7 +170,9 @@ requires-dist = [
     { name = "fasthtml-lucide", specifier = ">=1.61.0" },
     { name = "fasthtml-tailwindcss", extras = ["dev"], specifier = ">=4.3.3.post1" },
     { name = "python-fasthtml", specifier = ">=0.14.13" },
-    { name = "userharbor", extras = ["smtp", "sqlalchemy"], specifier = ">=0.9.1" },
+    { name = "userharbor", specifier = ">=0.9.1" },
+    { name = "userharbor-smtp", specifier = ">=0.4.0" },
+    { name = "userharbor-sqlalchemy", specifier = ">=0.7.0" },
 ]
 
 [[package]]
@@ -682,25 +686,17 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/e3/1f/2a94cf8cd741748e17ce330ab8aef40a22ba196662119297947c637f1a71/userharbor-0.9.1-py3-none-any.whl", hash = "sha256:b7f1c68aef6fcdc92eaacf7636c4a631049acf3f40f4e475bdc41c0d360d9188", size = 18911, upload-time = "2026-10-12T14:59:25.958Z" },
 ]
 
-[package.optional-dependencies]
-smtp = [
-    { name = "userharbor-smtp" },
-]
-sqlalchemy = [
-    { name = "userharbor-sqlalchemy" },
-]
-
 [[package]]
 name = "userharbor-smtp"
-version = "0.3.0"
+version = "0.4.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jinja2" },
     { name = "userharbor" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d1/8a/9a5ce43fe049511c2198c22eba99a5d21bfcf7c72f4105f4ae305af30874/userharbor_smtp-0.3.0.tar.gz", hash = "sha256:7b0c43d321c0d11bf7c7fe778cdad606cef87c9889c2560b0640a242a2203a4f", size = 4050, upload-time = "2026-09-07T14:10:23.864Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/55/1b/003fd943de44fd58e9f7471f96299704184636036ab2d6bbca0940e078c6/userharbor_smtp-0.4.0.tar.gz", hash = "sha256:3b53a7e6873768891dc2b63a1abbb2053b7963746553470d43fa97a8b3823216", size = 4758, upload-time = "2026-10-29T14:24:01.63Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/46/b0/635dcba0ea0b558f5c9fab0eefd0223a2d19a5231a99d1e79b509c43e30d/userharbor_smtp-0.3.0-py3-none-any.whl", hash = "sha256:944335600b49235fbfc146d79f9608b7f7ff6307d3a02ea25b9c0233803e1855", size = 6391, upload-time = "2026-09-07T14:10:22.953Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/a8/08fe8d8dcedc83646a6150eedacbae089a636eda6b4efc517dfbe298f5dc/userharbor_smtp-0.4.0-py3-none-any.whl", hash = "sha256:59d4a5cd808fc1761c599159db2c6d926556a3131f96fb11731dc9b3c2176040", size = 6558, upload-time = "2026-10-29T14:24:00.765Z" },
 ]
 
 [[package]]

@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from userharbor import UserHarbor
@@ -5,6 +7,7 @@ from userharbor_smtp import SMTPEmailSender
 from userharbor_sqlalchemy import SQLAlchemyUserStore
 
 from .settings import (
+    APP_URL,
     SECRET_KEY,
     SMTP_FROM_EMAIL,
     SMTP_HOST,
@@ -25,6 +28,10 @@ email_sender = SMTPEmailSender(
     username=SMTP_USERNAME,
     password=SMTP_PASSWORD,
     from_email=SMTP_FROM_EMAIL,
+    template_dir=Path(__file__).parent / "email_templates",
+    template_context={
+        "app_url": APP_URL,
+    },
 )
 
 harbor = UserHarbor(
