@@ -1,3 +1,5 @@
+from core.types import HTMLResult
+from fasthtml import HttpHeader
 from fasthtml.common import FT, H2, Div, Form, Header, P, Section
 from fasthtml_basecoat import Button, Card, Input, Label
 
@@ -10,6 +12,23 @@ def RegisterCard(**attrs) -> FT:
         ),
         Section(_RegisterForm()),
         **attrs,
+    )
+
+
+def SuccessfulRegisterCard() -> HTMLResult:
+    return (
+        Card(
+            Header(
+                H2("Registration Successful"),
+                P("Please check your email to verify your account."),
+            ),
+            cls="w-full max-w-sm text-center",
+            id="auth-register-card",
+            role="tabpanel",
+            aria_labelledby="auth-register-tab",
+        ),
+        HttpHeader("HX-Retarget", "#auth-register-card"),
+        HttpHeader("HX-Reswap", "outerHTML"),
     )
 
 

@@ -1,5 +1,7 @@
 from components.alert import Alert
+from components.auth.register import SuccessfulRegisterCard
 from core.harbor import harbor
+from core.types import HTMLResult
 from fasthtml.common import FT, HttpHeader, Response, fast_app
 from pages.auth import AuthPage
 from pages.verify_email import VerifyEmailPage
@@ -14,7 +16,7 @@ def index() -> FT:
 
 
 @rt
-def login(username: str, password: str) -> FT | Response:
+def login(username: str, password: str) -> HTMLResult:
     try:
         session_token = harbor.login(username, password)
     except UserHarborError as e:
@@ -32,20 +34,16 @@ def login(username: str, password: str) -> FT | Response:
 
 
 @rt
-def register(username: str, email: str, password: str) -> FT:
+def register(username: str, email: str, password: str) -> HTMLResult:
     try:
         harbor.register(username, email, password)
     except UserHarborError as e:
         return Alert("Registration Failed", str(e), variant="error")
-    return Alert(
-        "Registration Successful",
-        "Check your email for a verification link.",
-        variant="info",
-    )
+    return SuccessfulRegisterCard()
 
 
 @rt(methods=["GET"])
-def verify_email(token: str) -> tuple[FT, HttpHeader]:
+def verify_email(token: str) -> HTMLResult:
     try:
         harbor.verify_email(token)
     except UserHarborError as e:

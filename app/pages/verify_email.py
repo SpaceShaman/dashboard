@@ -5,11 +5,7 @@ from layouts.base import Base
 
 def VerifyEmailPage(error: str | None = None) -> FT:
     title = "Verification Failed" if error is not None else "Account Activated"
-    message = (
-        error
-        if error is not None
-        else "Your account has been activated.\nYou can now log in."
-    )
+    message = error if error is not None else "Your account has been activated."
     return Base(
         Div(
             Card(
