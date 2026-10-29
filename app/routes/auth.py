@@ -1,9 +1,12 @@
 from components.alert import Alert
+from components.auth.forgot_password import SuccessfulForgotPasswordCard
 from components.auth.register import SuccessfulRegisterCard
+from components.auth.reset_password import SuccessfulResetPasswordCard
 from core.harbor import harbor
 from core.types import HTMLResult
 from fasthtml.common import FT, HttpHeader, Response, fast_app
 from pages.auth import AuthPage
+from pages.reset_password import ResetPasswordPage
 from pages.verify_email import VerifyEmailPage
 from userharbor.exceptions import UserHarborError
 
@@ -51,3 +54,34 @@ def verify_email(token: str) -> HTMLResult:
     else:
         page = VerifyEmailPage()
     return page, HttpHeader("Referrer-Policy", "no-referrer")
+
+
+@rt(methods=["POST"])
+def forgot_password(email: str) -> HTMLResult:
+    try:
+        harbor.send_password_reset(email)
+    except UserHarborError as e:
+        return Alert("Password Reset Failed", str(e), variant="error")
+    return SuccessfulForgotPasswordCard()
+
+
+@rt(methods=["GET"])
+def reset_password(token: str) -> HTMLResult:
+    return (
+        ResetPasswordPage(token),
+        HttpHeader("Referrer-Policy", "no-referrer"),
+        HttpHeader("Cache-Control", "no-store"),
+    )
+
+
+@rt(methods=["POST"])
+def update_password(token: str, new_password: str, confirm_password: str) -> HTMLResult:
+    if new_password != confirm_password:
+        return Alert(
+            "Password Reset Failed", "Passwords do not match.", variant="error"
+        )
+    try:
+        harbor.reset_password(new_password=new_password, reset_token=token)
+    except UserHarborError as e:
+        return Alert("Password Reset Failed", str(e), variant="error")
+    return SuccessfulResetPasswordCard()

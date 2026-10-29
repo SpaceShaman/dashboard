@@ -1,4 +1,5 @@
-from fasthtml.common import FT, H2, Div, Form, Header, P, Section
+from core.types import HTMLResult
+from fasthtml.common import FT, H2, Div, Form, Header, HttpHeader, P, Section
 from fasthtml_basecoat import Button, Card, Input, Label
 
 
@@ -10,6 +11,25 @@ def ForgotPasswordCard(**attrs) -> FT:
         ),
         Section(_ForgotPasswordForm()),
         **attrs,
+    )
+
+
+def SuccessfulForgotPasswordCard() -> HTMLResult:
+    return (
+        Card(
+            Header(
+                H2("Check your email"),
+                P(
+                    "If an account exists for this email, you will receive password reset instructions."
+                ),
+            ),
+            cls="w-full max-w-sm text-center",
+            id="auth-forgot-password-card",
+            role="tabpanel",
+            aria_labelledby="auth-forgot-password-tab",
+        ),
+        HttpHeader("HX-Retarget", "#auth-forgot-password-card"),
+        HttpHeader("HX-Reswap", "outerHTML"),
     )
 
 
