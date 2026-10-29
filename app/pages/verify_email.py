@@ -8,7 +8,7 @@ def VerifyEmailPage(error: str | None = None) -> FT:
     message = (
         error
         if error is not None
-        else "Your account has been activated. You can now log in."
+        else "Your account has been activated.\nYou can now log in."
     )
     return Base(
         Div(

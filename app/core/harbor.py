@@ -28,7 +28,7 @@ email_sender = SMTPEmailSender(
     username=SMTP_USERNAME,
     password=SMTP_PASSWORD,
     from_email=SMTP_FROM_EMAIL,
-    template_dir=Path(__file__).parent / "email_templates",
+    template_dir=Path(__file__).parent.parent / "email_templates",
     template_context={
         "app_url": APP_URL,
     },

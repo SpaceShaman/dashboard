@@ -1,9 +1,8 @@
 from components.alert import Alert
 from core.harbor import harbor
-from fasthtml.common import FT, HttpHeader, fast_app
+from fasthtml.common import FT, HttpHeader, Response, fast_app
 from pages.auth import AuthPage
 from pages.verify_email import VerifyEmailPage
-from starlette.responses import RedirectResponse
 from userharbor.exceptions import UserHarborError
 
 auth_app, rt = fast_app()
@@ -15,12 +14,12 @@ def index() -> FT:
 
 
 @rt
-def login(username: str, password: str) -> FT | RedirectResponse:
+def login(username: str, password: str) -> FT | Response:
     try:
         session_token = harbor.login(username, password)
     except UserHarborError as e:
         return Alert("Login Failed", str(e), variant="error")
-    response = RedirectResponse("/", status_code=303)
+    response = Response(headers={"HX-Redirect": "/"})
     response.set_cookie(
         "session_token",
         session_token,
