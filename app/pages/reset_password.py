@@ -1,10 +1,10 @@
 from components.auth.reset_password import ResetPasswordCard
 from fasthtml.common import FT, Div
-from layouts.base import Base
+from layouts.auth import AuthLayout
 
 
 def ResetPasswordPage(token: str) -> FT:
-    return Base(
+    return AuthLayout(
         Div(
             ResetPasswordCard(
                 token,

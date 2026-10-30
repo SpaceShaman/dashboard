@@ -2,12 +2,14 @@ from components.auth.forgot_password import ForgotPasswordCard
 from components.auth.login import LoginCard
 from components.auth.register import RegisterCard
 from fasthtml.common import FT, Button, Div, Nav
-from fasthtml_basecoat import Tabs
-from layouts.base import Base
+from fasthtml_basecoat import (
+    Tabs,
+)
+from layouts.auth import AuthLayout
 
 
 def AuthPage() -> FT:
-    return Base(
+    return AuthLayout(
         Div(
             Tabs(
                 Nav(

@@ -1,12 +1,12 @@
 from fasthtml.common import FT, H2, A, Div, Header, P, Section
 from fasthtml_basecoat import Card
-from layouts.base import Base
+from layouts.auth import AuthLayout
 
 
 def VerifyEmailPage(error: str | None = None) -> FT:
     title = "Verification Failed" if error is not None else "Account Activated"
     message = error if error is not None else "Your account has been activated."
-    return Base(
+    return AuthLayout(
         Div(
             Card(
                 Header(H2(title), P(message)),
