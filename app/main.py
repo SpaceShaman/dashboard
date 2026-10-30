@@ -6,7 +6,7 @@ from fasthtml.common import (
     StaticImmutable,
 )
 from routes.auth import auth_app
-from routes.dashboard import dashboard_app
+from routes.index import index_app
 from starlette.middleware import Middleware
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import RedirectResponse
@@ -42,6 +42,6 @@ app = FastHTML(
     routes=[
         Mount("/static", StaticImmutable(directory="static"), name="static"),
         Mount("/auth", auth_app, name="auth"),
-        Mount("/", dashboard_app, name="dashboard"),
+        Mount("/", index_app, name="index"),
     ],
 )

@@ -1,31 +1,31 @@
+from components.dashboard.navbar import DashboardNavbar
+from components.dashboard.sidebar import DashboardSidebar
 from core.types import User
 from fasthtml.common import (
     FT,
     Div,
-    P,
-)
-from fasthtml_basecoat import (
-    Button,
-    ThemeSwitcher,
+    Main,
 )
 
 from .base import BaseLayout
 
 
-def DashboardLayout(*c, title: str, user: User, **kwargs) -> FT:
+def DashboardLayout(*c, title: str, user: User, active_path: str = "/", **kwargs) -> FT:
     return BaseLayout(
+        DashboardSidebar(active_path=active_path),
         Div(
-            P(f"Welcome, {user.username}!", cls="text-lg font-semibold"),
-            Button(
-                "Logout",
-                variant="outline",
-                hx_post="/auth/logout",
-                hx_swap="none",
+            DashboardNavbar(title=title, user=user),
+            Main(
+                Div(
+                    *c,
+                    cls="mx-auto w-full max-w-6xl space-y-6 px-4 py-8 md:px-8 md:py-10",
+                ),
+                id="dashboard-content",
+                tabindex="-1",
+                cls="min-w-0 flex-1",
             ),
-            ThemeSwitcher(),
-            cls="fixed top-4 right-4 z-50 flex items-center gap-4",
+            cls="flex min-h-dvh min-w-0 flex-col",
         ),
-        *c,
         title=title,
         **kwargs,
     )
