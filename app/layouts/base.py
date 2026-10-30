@@ -1,3 +1,4 @@
+from core.types import User
 from fasthtml.common import *
 from fasthtml_basecoat import (
     BasecoatInput,
@@ -10,7 +11,7 @@ from fasthtml_tailwindcss import TailwindHead
 ASSETS_ROOT = Path(__file__).parent.parent
 
 
-def Base(*c, title: str, user=None, **kwargs) -> FT:
+def Base(*c, title: str, user: User | None = None, **kwargs) -> FT:
     return Html(
         Head(
             Title(title),
@@ -26,11 +27,14 @@ def Base(*c, title: str, user=None, **kwargs) -> FT:
                 cls="fixed top-4 inset-x-0 z-50 flex flex-col items-center gap-4",
             ),
             Div(
-                Button(
-                    "Logout",
-                    variant="outline",
-                    hx_post="/auth/logout",
-                    hx_swap="none",
+                (
+                    P(f"Welcome, {user.username}!", cls="text-lg font-semibold"),
+                    Button(
+                        "Logout",
+                        variant="outline",
+                        hx_post="/auth/logout",
+                        hx_swap="none",
+                    ),
                 )
                 if user
                 else None,

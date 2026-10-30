@@ -1,9 +1,10 @@
+from core.types import User
 from fasthtml.common import FT, H2, Header, P, Section
 from fasthtml_basecoat import Card, CardAction
 from layouts.base import Base
 
 
-def DashboardPage(user) -> FT:
+def DashboardPage(user: User) -> FT:
     return Base(
         Card(
             Header(
