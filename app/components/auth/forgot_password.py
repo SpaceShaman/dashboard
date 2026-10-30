@@ -23,7 +23,7 @@ def SuccessfulForgotPasswordCard() -> HTMLResult:
                     "If an account exists for this email, you will receive password reset instructions."
                 ),
             ),
-            cls="w-full max-w-sm text-center",
+            cls="text-center",
             id="auth-forgot-password-card",
             role="tabpanel",
             aria_labelledby="auth-forgot-password-tab",
