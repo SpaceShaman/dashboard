@@ -17,7 +17,10 @@ async def check_session(request, call_next):
     token = request.cookies.get("session_token")
     is_authenticated = token is not None and harbor.verify_session(token)
 
-    if path.startswith("/auth") and is_authenticated:
+    if is_authenticated:
+        request.scope["user"] = harbor.get_current_user(token)
+
+    if path.startswith("/auth") and path != "/auth/logout" and is_authenticated:
         return RedirectResponse("/", status_code=303)
 
     if not path.startswith(("/auth", "/static")) and not is_authenticated:

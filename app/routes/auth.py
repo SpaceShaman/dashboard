@@ -36,6 +36,13 @@ def login(username: str, password: str) -> HTMLResult:
     return response
 
 
+@rt(methods=["POST"])
+def logout() -> HTMLResult:
+    response = Response(headers={"HX-Redirect": "/auth/"})
+    response.delete_cookie("session_token", path="/")
+    return response
+
+
 @rt
 def register(username: str, email: str, password: str) -> HTMLResult:
     try:

@@ -6,5 +6,5 @@ dashboard_app, rt = fast_app()
 
 
 @rt
-def index() -> HTMLResult:
-    return DashboardPage()
+def index(request) -> HTMLResult:
+    return DashboardPage(user=request.scope.get("user"))
